@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1511">
+  <title>Boundary — Live Cricket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <section class="login-screen" id="login-screen" aria-labelledby="login-title">
+    <div class="login-showcase">
+      <a class="brand login-brand" href="#" aria-label="Boundary home"><span class="brand-mark">B</span><span>boundary<span class="brand-dot">.</span></span></a>
+      <div class="showcase-content">
+        <span class="showcase-kicker"><i></i> YOUR FRONT-ROW SEAT TO THE GAME</span>
+        <h1>Every ball<br>has a <span>story.</span></h1>
+        <p>Live scores, player stats, and match-day moments — all in one place.</p>
+        <div class="showcase-score-card">
+          <div class="showcase-match-label"><span class="showcase-live-dot"></span> MATCH OF THE DAY <span>·</span> IPL FINAL</div>
+          <div class="showcase-teams"><div class="showcase-team"><span class="showcase-crest csk-crest">CSK</span><span>Chennai</span></div><strong>168<span>/5</span></strong></div>
+          <div class="showcase-divider"><span>INNINGS 1</span><i></i><span>20 OVERS</span></div>
+          <div class="showcase-teams"><div class="showcase-team"><span class="showcase-crest mi-crest">MI</span><span>Mumbai</span></div><strong>116<span>/7</span></strong></div>
+          <div class="showcase-chase"><span>MI need 53 from 36 balls</span><span>CRR 8.28 <b>↗</b></span></div>
+        </div>
+      </div>
+      <div class="showcase-footer"><span>BUILT FOR THE LOVE OF CRICKET</span><span>01 — 04 <i></i> LIVE MATCHES</span></div>
+    </div>
+    <div class="login-side">
+      <div class="login-top-note"><span id="auth-switch-copy">Already at the crease? <button class="auth-mode-link" id="auth-mode-toggle" type="button">Sign in</button></span><button class="login-theme-note" id="login-theme-toggle" type="button">◐ Theme follows you</button></div>
+      <form class="login-card" id="login-form">
+        <div class="login-icon">✳</div>
+        <p class="eyebrow">WELCOME TO BOUNDARY</p>
+        <h2 id="login-title">Create your<br>account.</h2>
+        <p class="login-description" id="login-description">Your cricket dashboard, your name. Create an account to follow every ball.</p>
+        <div class="auth-field" id="name-field"><label class="name-label" for="user-name">Your name</label><div class="name-input-wrap"><span aria-hidden="true">♙</span><input id="user-name" name="name" type="text" placeholder="e.g. Jamie Davis" autocomplete="name" maxlength="32" required><span class="input-check">✦</span></div></div>
+        <div class="auth-field" id="email-field"><label class="name-label" for="user-email">Email address</label><div class="name-input-wrap"><span aria-hidden="true">✉</span><input id="user-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" maxlength="254" required><span class="input-check">@</span></div></div>
+        <div class="auth-field password-field" id="password-field"><label class="name-label" for="user-password">Password</label><div class="name-input-wrap"><span aria-hidden="true">⌑</span><input id="user-password" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" maxlength="72" required><button class="password-toggle" id="password-toggle" type="button" aria-label="Show password">Show</button></div></div>
+        <p class="login-error" id="login-error" role="alert" aria-live="polite"></p>
+        <button class="login-submit" id="login-submit" type="submit">Create account <span>→</span></button>
+        <p class="login-privacy"><span>♧</span> Your password is securely hashed and never stored in your browser.</p>
+        <button class="sign-out-button" id="sign-out" type="button">Sign out of this device</button>
+      </form>
+      <div class="login-bottom"><span>© 2026 BOUNDARY SPORTS</span><span>THE GAME, A LITTLE CLOSER <b>♥</b></span></div>
+    </div>
+  </section>
+  <div class="app-shell" aria-hidden="true">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Boundary home">
+        <span class="brand-mark">B</span><span>boundary<span class="brand-dot">.</span></span>
+      </a>
+      <div class="side-label">MENU</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-item active" href="#overview"><span class="nav-icon">◫</span> Overview</a>
+        <a class="nav-item" href="#matches"><span class="nav-icon">◎</span> Matches <span class="nav-count" id="match-count">04</span></a>
+        <a class="nav-item" href="#stats"><span class="nav-icon">▥</span> Statistics</a>
+        <a class="nav-item" href="#summaries"><span class="nav-icon">▤</span> Match summaries</a>
+        <a class="nav-item" href="#highlights"><span class="nav-icon">▷</span> Highlights</a>
+      </nav>
+      <div class="side-label competition-label">COMPETITIONS</div>
+      <a class="competition-link selected" href="#matches"><span class="competition-badge ipl">I</span><span>Indian Premier League</span><span class="tiny-chevron">›</span></a>
+      <a class="competition-link" href="#matches"><span class="competition-badge wc">W</span><span>T20 World Cup</span></a>
+      <a class="competition-link" href="#matches"><span class="competition-badge test">T</span><span>Test Championship</span></a>
+      <div class="sidebar-bottom">
+        <div class="sidebar-promo"><div class="promo-icon">✦</div><strong>Every ball.<br>Every moment.</strong><p>Your game, closer than ever.</p><a href="#matches">Explore matches <span>↗</span></a></div>
+        <div class="profile"><div class="avatar" id="profile-avatar">JD</div><div class="profile-copy"><strong id="profile-name">Jamie Davis</strong><small>Cricket enthusiast</small></div><button class="profile-edit" id="change-name-sidebar" aria-label="Change your name" title="Change your name">✎</button></div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <div class="breadcrumb">Pages <span>/</span> <strong>Overview</strong></div>
+        <div class="topbar-actions"><div class="date-display"><span>◷</span> <span id="today-date">Today</span></div><button class="profile-shortcut" id="change-name" type="button" aria-label="Change your name" title="Change your name"><span id="topbar-avatar">JD</span></button><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Dark mode</span></button><button class="icon-button notification-button" aria-label="Notifications">♧<i></i></button><button class="mobile-menu" aria-label="Open menu">☰</button></div>
+      </header>
+
+      <section class="welcome-row">
+        <div><p class="eyebrow" id="welcome-date">TUESDAY, 27 OCTOBER 2026</p><h1><span id="greeting-text">Good evening, Jamie</span> <span class="wave">✦</span></h1><p class="welcome-subtitle">Here’s what’s happening in cricket today.</p></div>
+        <button class="filter-button"><span>☷</span> All competitions <span class="chevron">⌄</span></button>
+      </section>
+
+      <section class="hero-match" id="featured-match" aria-live="polite">
+        <div class="hero-bg-ball"></div>
+        <div class="hero-top"><div class="live-pill"><span></span> LIVE NOW</div><span class="hero-league">INDIAN PREMIER LEAGUE <b>·</b> FINAL</span><button class="more-button" aria-label="More match options">•••</button></div>
+        <div class="hero-score">
+          <div class="hero-team"><div class="team-crest crest-mi">MI</div><div class="hero-team-name">Mumbai Indians<small>MUMBAI</small></div></div>
+          <div class="score-center"><div class="score-numbers"><span id="hero-runs">116</span><span class="score-slash">/</span><span class="wicket-count" id="hero-wickets">7</span></div><div class="score-overs">OVERS <strong id="hero-overs">14.0</strong></div><div class="innings-note" id="hero-note">NEED 53 RUNS FROM 36 BALLS</div></div>
+          <div class="hero-team right"><div class="team-crest crest-csk">CSK</div><div class="hero-team-name">Chennai Super Kings<small>CHENNAI</small></div></div>
+        </div>
+        <div class="hero-bottom"><div class="venue"><span>⌖</span> Narendra Modi Stadium, Ahmedabad <b>·</b> Final</div><div class="hero-stats"><span>CRR <strong id="hero-crr">8.28</strong></span><i></i><span>RRR <strong id="hero-rrr">8.83</strong></span></div><button class="scorecard-button" id="scorecard-button">Full scorecard <span>↗</span></button></div>
+      </section>
+
+      <section class="section-heading" id="matches"><div><h2>Today’s matches <span class="heading-count" id="heading-count">4</span></h2><p>Follow all the action, ball by ball.</p></div><a href="#all-matches" class="view-all">View all matches <span>→</span></a></section>
+      <section class="match-grid" id="all-matches" aria-live="polite"><div class="loading-card">Loading live matches…</div></section>
+
+      <section class="section-heading detail-heading" id="stats"><div><h2>Player statistics</h2><p id="player-stats-caption">Batting and bowling figures for the selected match.</p></div><span class="selected-match-label" id="selected-match-label">Selected match</span></section>
+      <section class="panel detailed-stats-panel" aria-live="polite">
+        <div class="performer-tabs stats-tabs"><button class="performer-tab active" data-stats-tab="batting">Batting</button><button class="performer-tab" data-stats-tab="bowling">Bowling</button></div>
+        <div class="stats-table-wrap" id="player-stats-table"></div>
+      </section>
+
+      <section class="section-heading detail-heading" id="summaries"><div><h2>Match summaries</h2><p>Scores, match situations, and results at a glance.</p></div><span class="heading-count" id="summary-count">4 matches</span></section>
+      <section class="summary-grid" id="summary-list" aria-live="polite"><div class="loading-card">Loading match summaries…</div></section>
+
+      <section class="lower-grid">
+        <article class="panel top-performers"><div class="panel-heading"><div><h3>Top performers</h3><p>Today’s standout players</p></div><button class="dots-button" aria-label="More options">•••</button></div>
+          <div class="performer-tabs"><button class="performer-tab active" data-tab="batting">Batting</button><button class="performer-tab" data-tab="bowling">Bowling</button></div>
+          <div class="performer-list" id="performer-list"></div>
+        </article>
+        <article class="panel live-moments" id="highlights"><div class="panel-heading"><div><h3>Live moments <span class="live-mini"><i></i> LIVE</span></h3><p>Big moments as they happen</p></div><button class="dots-button" aria-label="More options">•••</button></div>
+          <div class="moment-feed" id="moment-feed"><div class="moment-item"><span class="moment-time">NOW</span><span class="moment-marker boundary">4</span><div><strong>The crowd erupts!</strong><p>Rohit Sharma finds the gap for four.</p></div></div><div class="moment-item"><span class="moment-time">2m</span><span class="moment-marker wicket">W</span><div><strong>What a breakthrough!</strong><p>Jasprit Bumrah gets the big wicket.</p></div></div><div class="moment-item"><span class="moment-time">5m</span><span class="moment-marker six">6</span><div><strong>That’s gone all the way</strong><p>Suryakumar sends it into the stands.</p></div></div></div>
+        </article>
+      </section>
+      <footer class="footer"><span>© 2026 Boundary Sports</span><span>Made for the love of the game <b>♥</b></span><a href="/api/matches">API</a></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <dialog class="scorecard-dialog" id="scorecard-dialog"><div class="dialog-header"><div><span class="eyebrow">MATCH CENTRE</span><h2>Full scorecard</h2></div><button class="dialog-close" aria-label="Close scorecard">×</button></div><div id="scorecard-content"></div></dialog>
+  <script src="/app.js"></script>
+</body>
+</html>

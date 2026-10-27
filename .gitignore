@@ -1,0 +1,17 @@
+# Maven build output
+target/
+
+# Local database files and application logs
+data/
+*.mv.db
+*.trace.db
+*.log
+
+# IDE and operating system files
+.idea/
+.vscode/
+.classpath
+.project
+.settings/
+.DS_Store
+Thumbs.db
