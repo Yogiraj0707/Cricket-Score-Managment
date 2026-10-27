@@ -1,6 +1,6 @@
 # Boundary — Cricket Score Management
 
-A Spring Boot cricket scoring platform with a responsive live dashboard, REST API, and server-sent events (SSE) for real-time score updates. The demo data is simulated in memory; no external cricket data provider or database is required.
+A Spring Boot cricket scoring platform with a responsive live dashboard, REST API, and server-sent events (SSE) for real-time score updates. Demo match data is simulated in memory, and user accounts are stored in a local H2 database; no external cricket data provider or database server is required.
 
 ## Requirements
 
@@ -16,6 +16,16 @@ mvn spring-boot:run
 Open [http://localhost:8080](http://localhost:8080). Live sample matches update every eight seconds. Override the interval with the `CRICKET_SIMULATION_INTERVAL_MS` environment variable or the `cricket.simulation-interval-ms` property.
 
 On first visit, create an account with your name, email, and password, or switch to sign in if you already registered. Accounts are stored in the local H2 database and passwords are BCrypt-hashed; browser sessions use an HttpOnly, SameSite=Lax cookie. The light/dark theme preference remains local to the browser. Use the profile edit button to change your display name.
+
+## Screenshots
+
+### Sign-in and registration
+
+![Boundary sign-in and registration page](screenshots/login-page.png)
+
+### Live cricket dashboard
+
+![Boundary live cricket dashboard](screenshots/home-page.png)
 
 ## REST API
 
